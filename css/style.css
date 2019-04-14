@@ -2678,7 +2678,7 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
   left: 0;
   opacity: 1;
 }
-@media (max-width:1366px) {
+@media (max-width:900px) {
   img#skill {
     display: none;
   }
