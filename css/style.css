@@ -2704,7 +2704,7 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
 
 @media (max-widht:800px) {
   .contain{
-    margin-left:-70px;
+    margin-left:-40px;
   }
 
 }
