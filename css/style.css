@@ -2679,7 +2679,7 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
   opacity: 1;
 }
 @media (max-width:800px) {
-  img#skill {
+  #skill {
     display: none;
   }
 }
@@ -2702,7 +2702,7 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
   }
 }
 
-@media (max-widht:800px) {
+@media (max-widht:600px) {
   .contain{
     margin-left:-40px;
   }
