@@ -2708,3 +2708,10 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
   }
 
 }
+
+kbd kbd {
+  background: #eaeaea;
+  border: 1px solid #ccc;
+  margin: 0 .1em;
+  padding: .25em;
+}
