@@ -473,7 +473,7 @@ button:focus {
     line-height: 24px;
     font-weight: 600; }
   .contact_info .info_item h6 {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 24px;
     color: "Roboto", sans-serif;
     font-weight: bold;
@@ -482,7 +482,7 @@ button:focus {
     .contact_info .info_item h6 a {
       color: #000000; }
   .contact_info .info_item p {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 24px;
     padding: 2px 0px; }
 
