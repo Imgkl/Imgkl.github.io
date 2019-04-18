@@ -5,7 +5,6 @@
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Medium Layout: 1280px */
-/* Tablet Layout: 768px */
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /*---------------------------------------------------- */
@@ -465,7 +464,7 @@ button:focus {
 
 .contact_info .info_item {
   position: relative;
-  padding-left: 45px; }
+  padding-left: 145px; }
   .contact_info .info_item i {
     position: absolute;
     left: 0;
