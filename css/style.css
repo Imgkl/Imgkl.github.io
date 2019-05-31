@@ -2701,7 +2701,14 @@ color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
   }
 }
 
-@media (max-widht:600px) {
+@media (max-widht:800px) {
+  .content-bloc{
+    margin-left:-40px;
+  }
+
+}
+
+@media (max-widht:800px) {
   .content-bloc__effect{
     margin-left:-40px;
   }
