@@ -3279,7 +3279,7 @@ html {
 
 .contain {
   width: 550px;
-  margin-left: 150px;
+  margin-left: 12vw;
 }
 
 .content-bloc {
@@ -3303,7 +3303,7 @@ html {
 
 /* progress bar styles !!!YOU NEED THEM */
 .progress-container {
-  display: flex;
+  display: inherit;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -3312,6 +3312,12 @@ html {
   position: relative;
   width: 500px;
   box-sizing: border-box;
+}
+
+@media(max-width:800px) {
+  .progress-bar {
+    width: 80vw;
+  }
 }
 
 .progress-bar:not(:last-child) {
@@ -3363,7 +3369,7 @@ html {
 
 .progress-bar__skill,
 .progress-bar__value {
-  font-size: 14px;
+  font-size: 1em;
   letter-spacing: 1px;
   color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
 }
@@ -3429,7 +3435,7 @@ html {
   opacity: 1;
 }
 
-@media (max-width:800px) {
+@media (max-width:700px) {
   #skill {
     display: none;
   }
@@ -3453,183 +3459,166 @@ html {
   }
 }
 
-@media (max-widht:800px) {
-  .content-bloc {
-    margin-left: -40px;
-  }
-
-}
-
-@media (max-widht:800px) {
-  .content-bloc__effect {
-    margin-left: -40px;
-  }
-
-}
-
-
-/* form rules */
-
 .form {
-	width: 350px;
-	margin: auto;
-	padding: 20px;
-	background-color: #e8ebed;
-	-webkit-box-shadow: 0 0 80px rgba(0,0,0,.2);
-	box-shadow: 0 0 80px rgba(0,0,0,.2);
-	border-radius: 10px;
-	border-top: 30px solid #5c5d5e;
-	position: relative;
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  background-color: #e8ebed;
+  -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, .2);
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);  
+  border-radius: 10px;
+  border-top: 30px solid #5c5d5e;
+  position: relative;
 }
 
 /* control buttons in form header */
 
 .form::before {
-	content: '';
-	position: absolute;
-	top: -20px;
-	left: 15px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: #adadae;
-	-webkit-box-shadow: 20px 0 0 #adadae, 40px 0 0 #adadae;
-	box-shadow: 20px 0 0 #adadae, 40px 0 0 #adadae;
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #adadae;
+  -webkit-box-shadow: 20px 0 0 #adadae, 40px 0 0 #adadae;
+  box-shadow: 20px 0 0 #adadae, 40px 0 0 #adadae;
 }
 
 /* form title */
 
 .form__title {
-	color: #5c5d5e;
-	font-size: 1.2rem;
-	font-weight: 700;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #adadae;
+  color: linear-gradient(90deg, #62bdfc 0%, #602c82 100%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #adadae;
 }
 
 /* form wrapper */
 
 .form__wrapper {
-	padding: 20px 0;
+  padding: 20px 0;
 }
 
 /* hide checkboxes */
 
 .form__folder input[type="checkbox"] {
-	position: absolute;
-	left: -999rem;
+  position: absolute;
+  left: -999rem;
 }
 
 /* common rules for labels and links */
 
 .form__folder label,
 .form__folder a {
-	display: block;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin-left: 25px;
-	cursor: pointer;
-	position: relative;
-	clear: left;
-	text-transform: capitalize;
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 25px;
+  cursor: pointer;
+  position: relative;
+  clear: left;
+  text-transform: capitalize;
 }
 
 /* form labels */
 
 .form__folder label {
-	float: left;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	color: #5c5d5e;
-	font-size: 1.2rem;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #5c5d5e;
+  font-size: 1.2rem;
 }
 
 /* form links */
 
 .form__folder a {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	text-decoration: none;
-	color: #5c5d5e;
-	text-transform: capitalize;
-	font-size: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #5c5d5e;
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
 /* disable outline */
 
 .form__folder a:hover,
 .form__folder a:focus {
-	outline: none;
+  outline: none;
 }
 
 /* set font-family FontAwesome for label and link */
 
 .form__folder label::before,
 .form__folder a::before {
-	display: block;
-	position: absolute;
-	font-family: 'FontAwesome';
-	top: 8px;
-	left: -25px;
+  display: block;
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 8px;
+  left: -25px;
 }
 
 /* icon closed folder */
 
-.form__folder input[type="checkbox"] + label::before {
-	content: '\f07b';
+.form__folder input[type="checkbox"]+label::before {
+  content: '\f07b';
 }
 
 /* icon opened folder */
 
-.form__folder input[type="checkbox"]:checked + label::before {
-	content: '\f07c';
+.form__folder input[type="checkbox"]:checked+label::before {
+  content: '\f07c';
 }
 
 /* icon link */
 
 .form__folder a::before {
-	content: '\f068';
+  content: '\f068';
 }
 
 /* make subfolder invisible */
 
 .form__subfolder {
-	display: none;
-	margin-left: 30px;
-	clear: left;
+  display: none;
+  margin-left: 30px;
+  clear: left;
 }
 
 /* make subfolder visible */
 
-.form__folder input[type="checkbox"]:checked ~ .form__subfolder {
-	display: block;
+.form__folder input[type="checkbox"]:checked~.form__subfolder {
+  display: block;
 }
 
 /* button reset */
 
 #collapse {
-	display: block;
-	width: 100%;
-	margin: auto;
-	padding: 10px;
-	border-radius: 10px;
-	border: none;
-	font-size: 1.8rem;
-	font-family: inherit;
-	font-weight: 700;
-	letter-spacing: .1rem;
-	color: #e8ebed;
-	text-shadow: 1px 1px .3px rgba(0,0,0,.3);
-	text-transform: capitalize;
-	background-color: #6b7c87;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	cursor: pointer;
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.8rem;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: #e8ebed;
+  text-shadow: 1px 1px .3px rgba(0, 0, 0, .3);
+  text-transform: capitalize;
+  background-color: #6b7c87;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 #collapse:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 4px #b9c3c9;
-	box-shadow: 0 0 0 4px #b9c3c9;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 4px #b9c3c9;
+  box-shadow: 0 0 0 4px #b9c3c9;
 }
