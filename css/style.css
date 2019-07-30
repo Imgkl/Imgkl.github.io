@@ -3463,6 +3463,15 @@ html {
   position: relative;
 }
 
+@media (max-width:800) {
+  .form {
+    padding: 20px;
+  }
+  .form__wrapper{
+    padding: 20px;
+  }
+}
+
 /* control buttons in form header */
 
 .form::before {
