@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
 	<title>ImGkl - A aspiring developer's personal website</title>
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,9 +17,8 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
 
 	<!-- main css -->
@@ -46,7 +46,8 @@
 										<p id="type"></p>
 									</font>
 								</b>
-								<h5 class="text-uppercase">Aspiring Developer.</h5>
+								<h2 id="type2"></h2>
+
 								<div class="d-flex align-items-center">
 									<a class="primary_btn" href="#about"><span>Know more about me ➜</span></a>
 									<a class="primary_btn tr-bg"
@@ -55,6 +56,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-5">
 							<div class="home_right_img">
 								<figure class="snip1566"><img id="img1" src="img/banner/home-right3.png" /></figure>
@@ -75,6 +77,7 @@
 									</div>
 								</div>
 							</footer>
+
 						</div>
 					</div>
 
@@ -270,6 +273,17 @@
 				</div>
 			</div>
 			<div class="row feature_inner">
+
+
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s3.png" alt="" width="70" height="68">
+						<h4>Flutter<br>development</h4>
+
+					</div>
+				</div>
+
+
 				<div class="col-lg-3 col-md-6">
 					<div class="feature_item">
 						<img src="img/services/s1.png" alt="">
@@ -284,13 +298,7 @@
 
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s3.png" alt="">
-						<h4>Machine<br>learning</h4>
 
-					</div>
-				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="feature_item">
 						<img src="img/services/s4.png" alt="">
@@ -326,9 +334,9 @@
 							<div class="progress-bar progress-bar--lg-offset progress-bar--aligned-values progress-bar--no-overflow"
 								data-effect="4" data-value="50" data-skill="Pen-testing"></div>
 							<div class="progress-bar progress-bar--lg-offset progress-bar--aligned-values progress-bar--no-overflow"
-								data-effect="4" data-value="35" data-skill="Blockchain"></div>
+								data-effect="4" data-value="40" data-skill="Flutter"></div>
 							<div class="progress-bar progress-bar--lg-offset progress-bar--aligned-values progress-bar--no-overflow"
-								data-effect="4" data-value="25" data-skill="Deep Learning"></div>
+								data-effect="4" data-value="35" data-skill="Blockchain"></div>
 
 						</div>
 					</div>
@@ -420,26 +428,39 @@
 							Recently done\working project </h2>
 						<p><i>P.S: * means I'm currently working on it.</i></p>
 						<br>
-						<h3> For more insights about my projects click on the <b>FOLDER ICON </b> and also check out my
-							<a href="https://imgkl.github.io/projects" target="_blank"> Portfolio site</a> </h3>
+						<h3> For more insights about my projects, check out my
+							<a href="https://imgkl.github.io/projects" target="_blank"> Portfolio site 👨‍💻</a> </h3>
 					</div>
 				</div>
 				<form class="form">
 					<!-- form header -->
 					<h1 class="form__title">:~/My_projects$</h1>
 					<fieldset class="form__wrapper">
+						<h1 class="form__title1">Click on folder icon to reveal more. 📁</h1>
 
+						<fieldset class="form__folder">
+							<input id="level-1-3" type="checkbox">
+							<label for="level-1-3">Flutter</label>
+							<!-- form subfolder -->
+							<div class="form__subfolder">
+								<a href="#" class="level-2">SlamBook</a>
+								<a href="#" class="level-2">Binge Watch</a>
+								<a href="#" class="level-2">Shortrl *</a>
+
+							</div>
+						</fieldset>
 						<!-- form folder -->
 						<fieldset class="form__folder">
 							<input id="level-1-1" type="checkbox">
 							<label for="level-1-1">Frontend</label>
 							<!-- form subfolder -->
 							<div class="form__subfolder">
-								<a href="https://imgkl.github.io" target="_blank" class="level-2">My Resume</a>
+								<a href="https://imgkl.github.io" target="_blank" class="level-2">My Resume - The
+									website you are looking right now.</a>
 								<a href="https://imgkl.github.io/projects" target="_blank" class="level-2">Project
-									Portfolio</a>
+									Portfolio - Project Showcase</a>
 								<a href="https://imgkl.github.io/speed" target="_blank" class="level-2">Speed-Minimal -
-									Speed Test</a>
+									A minimal website to test the user's network speed.</a>
 								<a href="https://imgkl.github.io/R.U.D.E" target="_blank" class="level-2">R.U.D.E -
 									Speech Bot</a>
 							</div>
@@ -463,17 +484,7 @@
 						</fieldset>
 
 						<!-- form folder -->
-						<fieldset class="form__folder">
-							<input id="level-1-3" type="checkbox">
-							<label for="level-1-3">Flutter *</label>
-							<!-- form subfolder -->
-							<div class="form__subfolder">
-								<a href="#" class="level-2">MCard</a>
-								<a href="#" class="level-2">Xylophone</a>
-								<a href="#" class="level-2">Clima *</a>
 
-							</div>
-						</fieldset>
 
 						<!-- form folder -->
 						<fieldset class="form__folder">
@@ -567,6 +578,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typeit6/dist/typeit.min.js"></script>
 	<script src="js/skills.js"></script>
 	<script src="js/theme.js"></script>
 
