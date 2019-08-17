@@ -2,14 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
 
-
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
-/* Medium Layout: 1280px */
-/* Mobile Layout: 320px */
-/* Wide Mobile Layout: 480px */
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
 body {
   line-height: 26px;
   font-size: 15px;
@@ -2863,13 +2855,7 @@ h6 {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px)
-/*----------------------------------------------------*/
-/* Footer Area css
-============================================================================================ */
-
-
-
+@media only screen and (min-width: 992px) and (max-width: 1200px){
 
 
 .footer_area:before {
@@ -2881,6 +2867,8 @@ h6 {
   bottom: -10px;
   background: #ffffff;
   z-index: -1;
+}
+
 }
 
 @media (max-width: 1024px) {
