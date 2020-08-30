@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imgkl/views/landing_page.dart';
+import 'package:imgkl/views/pages/page_second/landing_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +16,23 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LandingPage(),
+      home: CheckDevice(),
     );
   }
 }
 
+class CheckDevice extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    return (screenWidth > 700 == true)
+        ? LandingPage()
+        : Scaffold(
+            body: Container(
+              child: Center(
+                child: Text("Visit from PC"),
+              ),
+            ),
+          );
+  }
+}
