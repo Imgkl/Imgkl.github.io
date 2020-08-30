@@ -10,11 +10,14 @@ List<String> images = [
   'https://i.picsum.photos/id/1049/3900/3120.jpg?hmac=Ox2snaSyRuEofh721sagxPbwVzLtung57FNHefB8Kdw',
   'https://i.picsum.photos/id/1021/2048/1206.jpg?hmac=fqT2NWHx783Pily1V_39ug_GFH1A4GlbmOMu8NWB3Ts',
   "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2680&q=80"
-  
 ];
 
-List<String> titles = ['Sai Gokula Krishnan ','RUDE', "Moofies"];
-List<String> subtitles = ['I Code Stuff. ','Light-hearted mean notifications in hour intrevals.', "Movie searching never been easier" ];
+List<String> titles = ['Sai Gokula Krishnan ', 'RUDE', "Moofies"];
+List<String> subtitles = [
+  'I Code Stuff. ',
+  'Light-hearted mean notifications in hour intrevals.',
+  "Movie searching never been easier"
+];
 
 String image = images.elementAt(0);
 String title = titles.elementAt(0);
@@ -27,7 +30,8 @@ class LandingPage extends StatefulWidget {
   _LandingPageState createState() => _LandingPageState();
 }
 
-class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin {
+class _LandingPageState extends State<LandingPage>
+    with TickerProviderStateMixin {
   AnimationController _controller1;
   Animation _animation1;
 
@@ -48,6 +52,8 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
 
   AnimationController _controller7;
   Animation textAni;
+
+  int currentIndex = 0;
 
   @override
   void initState() {
@@ -167,6 +173,7 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               image = images.elementAt(i);
               title = titles.elementAt(i);
               subtitle = subtitles.elementAt(i);
+              currentIndex = i;
             });
           });
         },
@@ -205,7 +212,7 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               color: Colors.transparent,
             ),
             Positioned.fill(
-                          child: Container(
+              child: Container(
                 color: Colors.black.withOpacity(0.3),
               ),
             ),
@@ -230,10 +237,44 @@ class _LandingPageState extends State<LandingPage> with TickerProviderStateMixin
               marginTop: 250.0,
               text: subtitle,
             ),
+            //TODO: find the issue
+            // currentIndex != 0
+            //     ? Positioned(
+            //         top: 40,
+            //         left: 25,
+            //         child: GestureDetector(
+            //           onTap: () {
+            //             setState(() {
+            //               _controller1.forward();
+            //               _controller2.forward();
+            //               _controller3.forward();
+            //               _controller4.forward();
+            //               _controller5.forward();
+            //               _controller6.forward();
+            //               _controller7.forward();
+            //               Future.delayed(Duration(milliseconds: 300), () {
+            //                 image = images.elementAt(0);
+            //                 title = titles.elementAt(0);
+            //                 subtitle = subtitles.elementAt(0);
+            //                 currentIndex = 0;
+            //               });
+            //             });
+            //           },
+            //           child: Container(
+            //             child: Text(
+            //               "Home",
+            //               style: TextStyle(
+            //                 color: Colors.white,
+            //                 fontSize: 30,
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //       )
+            //     : Container()
           ],
         ),
       ),
     );
   }
 }
-
