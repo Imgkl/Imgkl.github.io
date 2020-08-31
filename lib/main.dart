@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Gokul\'s Portfolio,
+      title: 'Gokul\'s Portfolio',
       theme: ThemeData(
         fontFamily: "Alata",
         primarySwatch: Colors.blue,
