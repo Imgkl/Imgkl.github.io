@@ -7,9 +7,9 @@ import 'package:imgkl/widgets/animated_text.dart';
 int i = 0;
 
 List<String> images = [
-  "assets/images/screen1.jpg",
-  "assets/images/screen2.jpg",
-  "assets/images/screen3.jpeg"
+'https://i.picsum.photos/id/1049/3900/3120.jpg?hmac=Ox2snaSyRuEofh721sagxPbwVzLtung57FNHefB8Kdw',
+  'https://i.picsum.photos/id/1021/2048/1206.jpg?hmac=fqT2NWHx783Pily1V_39ug_GFH1A4GlbmOMu8NWB3Ts',
+  "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2680&q=80"
 ];
 
 List<String> titles = ['Sai Gokula Krishnan ', 'RUDE', "Moofies"];
@@ -231,7 +231,7 @@ class _LandingPageState extends State<LandingPage>
             ),
             AnimatedTexts(
               change: change,
-              textAni: -textAni.value,
+              textAni: -textAni.value / -2,
               fontsize: 24.0,
               letterSpacing: 3.0,
               marginTop: 250.0,
