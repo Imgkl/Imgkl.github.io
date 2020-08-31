@@ -41,7 +41,7 @@ class _AnimatingCirclesState extends State<AnimatingCircles> {
             child: OverflowBox(
               maxHeight: widget.width * 2,
               maxWidth: widget.width * 2,
-              child: Image.network(
+              child: Image.asset(
                 widget.image,
                 fit: BoxFit.cover,
                 height: widget.width * widget._size.value,
