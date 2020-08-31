@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:imgkl/views/pages/page_second/animated_circles.dart';
-import 'package:imgkl/views/pages/page_second/animated_text.dart';
+import 'package:imgkl/widgets/animated_circles.dart';
+import 'package:imgkl/widgets/animated_text.dart';
 
 int i = 0;
 
