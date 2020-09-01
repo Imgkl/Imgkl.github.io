@@ -29,6 +29,7 @@ class AnimatedTexts extends StatelessWidget {
           (change) ? textAni : -textAni, 0, 1),
       child: Text(
         text,
+        textAlign: TextAlign.center,
         style: TextStyle(
           letterSpacing: letterSpacing,
           color: Colors.white,
