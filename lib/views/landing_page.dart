@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:imgkl/widgets/animated_circles.dart';
 import 'package:imgkl/widgets/animated_text.dart';
+import 'package:imgkl/widgets/custom_painter.dart';
 
 int i = 0;
 
@@ -208,12 +209,23 @@ class _LandingPageState extends State<LandingPage>
           style:
               TextStyle(color: currentIndex == 5 ? Colors.black : Colors.white),
         ),
-        icon: Transform.rotate(
-            angle: -_animation3.value,
-            child: Icon(
-              Icons.panorama_fish_eye_outlined,
-              color: currentIndex == 5 ? Colors.black : Colors.white,
-            )),
+        // icon: Transform.rotate(
+        //     angle: -_animation3.value,
+        //     child: Icon(
+        //       Icons.panorama_fish_eye_outlined,
+        //       color: currentIndex == 5 ? Colors.black : Colors.white,
+        //     )),
+        icon: Container(
+          height: 30,
+          width: 30,
+          child: CircleProgressBar(
+            backgroundColor: currentIndex == 3
+                ? Colors.white.withOpacity(0.2)
+                : Colors.black.withOpacity(0.2),
+            foregroundColor: currentIndex == 5 ? Colors.black : Colors.white,
+            value: currentIndex / 6,
+          ),
+        ),
       ),
       body: Container(
         color: Colors.black,
