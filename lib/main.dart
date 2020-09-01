@@ -48,7 +48,7 @@ class CheckDevice extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 08.0),
-                  child: TyperAnimatedTextKit(
+                  child: TypewriterAnimatedTextKit(
                       text: [
                         "Mobile site is under construction.\nPlease visit from PC",
                       ],
