@@ -177,10 +177,9 @@ class _LandingPageState extends State<LandingPage>
             });
           });
         },
-        backgroundColor: Colors.yellow[800],
-        mini: true,
+        backgroundColor: Colors.cyan,
         child: Transform.rotate(
-            angle: -_animation3.value, child: Icon(Icons.screen_rotation)),
+            angle: -_animation3.value, child: Icon(Icons.panorama_fish_eye_outlined)),
       ),
       body: Container(
         color: Colors.black,
