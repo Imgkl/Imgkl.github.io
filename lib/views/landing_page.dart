@@ -15,7 +15,15 @@ List<String> images = [
   'https://i.imgur.com/1u4m4pE.jpg',
 ];
 
-List<String> titles = ['Sai Gokula Krishnan', 'RUDE', "Moofies", "Quotes.", "Yep/Nope", "Pixie", "CommuniTV"];
+List<String> titles = [
+  'Sai Gokula Krishnan',
+  'RUDE',
+  "Moofies",
+  "Quotes.",
+  "Yep/Nope",
+  "Pixie",
+  "CommuniTV"
+];
 List<String> subtitles = [
   'I Code Stuff.',
   'Light-hearted mean notifications in hour intrevals.',
@@ -24,6 +32,15 @@ List<String> subtitles = [
   'Too confused to take desicions?\nA Fun little app to nudge you in the right direction',
   'When you photograph people in color, you photograph their clothes.\nBut when you photograph people in Black and white, \nyou photograph their souls!',
   'Hand curated top rated TV shows and details of where to watch '
+];
+List<Color> fabColors = [
+  Colors.cyan,
+  Colors.red,
+  Colors.orangeAccent,
+  Colors.black,
+  Colors.teal,
+  Colors.white,
+  Colors.greenAccent
 ];
 
 String image = images.elementAt(0);
@@ -161,7 +178,7 @@ class _LandingPageState extends State<LandingPage>
     double width = MediaQuery.of(context).size.width;
     //double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           if (i >= 6) {
             i = 0;
@@ -184,9 +201,19 @@ class _LandingPageState extends State<LandingPage>
             });
           });
         },
-        backgroundColor: Colors.cyan,
-        child: Transform.rotate(
-            angle: -_animation3.value, child: Icon(Icons.panorama_fish_eye_outlined)),
+        backgroundColor: fabColors[currentIndex],
+        isExtended: true,
+        label: Text(
+          "$currentIndex/6",
+          style:
+              TextStyle(color: currentIndex == 5 ? Colors.black : Colors.white),
+        ),
+        icon: Transform.rotate(
+            angle: -_animation3.value,
+            child: Icon(
+              Icons.panorama_fish_eye_outlined,
+              color: currentIndex == 5 ? Colors.black : Colors.white,
+            )),
       ),
       body: Container(
         color: Colors.black,
