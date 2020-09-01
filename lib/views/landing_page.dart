@@ -7,7 +7,7 @@ import 'package:imgkl/widgets/custom_painter.dart';
 int i = 0;
 
 List<String> images = [
-  'https://i.imgur.com/yINmGav.jpg',
+  'https://i.imgur.com/zwsSGWj.jpg',
   'https://i.imgur.com/gSFHV65.jpg',
   "https://i.imgur.com/665Fat1.jpg",
   "https://i.imgur.com/Ud5XO0q.jpg",
