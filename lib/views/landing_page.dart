@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:imgkl/widgets/animated_circles.dart';
 import 'package:imgkl/widgets/animated_text.dart';
@@ -7,16 +6,24 @@ import 'package:imgkl/widgets/animated_text.dart';
 int i = 0;
 
 List<String> images = [
-  'https://i.picsum.photos/id/1049/3900/3120.jpg?hmac=Ox2snaSyRuEofh721sagxPbwVzLtung57FNHefB8Kdw',
-  'https://i.picsum.photos/id/1021/2048/1206.jpg?hmac=fqT2NWHx783Pily1V_39ug_GFH1A4GlbmOMu8NWB3Ts',
-  "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2680&q=80"
+  'https://i.imgur.com/yINmGav.jpg',
+  'https://i.imgur.com/gSFHV65.jpg',
+  "https://i.imgur.com/665Fat1.jpg",
+  "https://i.imgur.com/Ud5XO0q.jpg",
+  'https://i.imgur.com/fy07HZb.jpg',
+  'https://i.imgur.com/09uFwAd.jpg',
+  'https://i.imgur.com/1u4m4pE.jpg',
 ];
 
-List<String> titles = ['Sai Gokula Krishnan ', 'RUDE', "Moofies"];
+List<String> titles = ['Sai Gokula Krishnan', 'RUDE', "Moofies", "Quotes.", "Yep/Nope", "Pixie", "CommuniTV"];
 List<String> subtitles = [
-  'I Code Stuff. ',
+  'I Code Stuff.',
   'Light-hearted mean notifications in hour intrevals.',
-  "Movie searching never been easier"
+  "Movie searching never been easier",
+  'Everyone needs motivation sometimes.\n Around 60K+ Quotes',
+  'Too confused to take desicions?\nA Fun little app to nudge you in the right direction',
+  'When you photograph people in color, you photograph their clothes.\nBut when you photograph people in Black and white, \nyou photograph their souls!',
+  'Hand curated top rated TV shows and details of where to watch '
 ];
 
 String image = images.elementAt(0);
@@ -156,9 +163,9 @@ class _LandingPageState extends State<LandingPage>
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if (i >= 2) {
+          if (i >= 6) {
             i = 0;
-          } else if (i < 2) {
+          } else if (i < 6) {
             i++;
           }
           setState(() {
