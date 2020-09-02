@@ -16,6 +16,16 @@ List<String> images = [
   'https://i.imgur.com/1u4m4pE.jpg',
 ];
 
+List<String> hashes = [
+  "KKN,;__N4nS|%29FM_4nxu",
+  "L23[xT%M004nj[fQayj[00Rj~q%M",
+  "LHF~gV-;tRslG^t7tRoLT0RPoKRj",
+  "LDN0*g~Uvz00?aWYRkt6~p9ZD%~p",
+  "LHAU1[o~W=kCy?XTj[bHEmWXn%fk",
+  "L4AAaa0000-;00?b~qD%-;xu4n%M",
+  "L26uU~8w00%%00.9.SI801W,.7xI"
+];
+
 List<String> titles = [
   'Sai Gokula Krishnan',
   'RUDE',
@@ -45,6 +55,7 @@ List<Color> fabColors = [
 ];
 
 String image = images.elementAt(0);
+String hash = hashes.elementAt(0);
 String title = titles.elementAt(0);
 String subtitle = subtitles.elementAt(0);
 
@@ -77,7 +88,7 @@ class _LandingPageState extends State<LandingPage>
 
   AnimationController _controller7;
   Animation textAni;
-
+  bool switcher = false;
   int currentIndex = 0;
 
   @override
@@ -183,6 +194,7 @@ class _LandingPageState extends State<LandingPage>
         onPressed: () {
           if (i >= 6) {
             i = 0;
+            switcher = true;
           } else if (i < 6) {
             i++;
           }
@@ -197,6 +209,7 @@ class _LandingPageState extends State<LandingPage>
             Future.delayed(Duration(milliseconds: 300), () {
               image = images.elementAt(i);
               title = titles.elementAt(i);
+              hash = hashes.elementAt(i);
               subtitle = subtitles.elementAt(i);
               currentIndex = i;
             });
@@ -237,6 +250,8 @@ class _LandingPageState extends State<LandingPage>
               width: width,
               size: _size3,
               image: image,
+              hash: hash,
+              switcher: switcher,
               sizeFator: 1.2,
               color: Colors.transparent,
             ),
@@ -244,6 +259,8 @@ class _LandingPageState extends State<LandingPage>
               animation: _animation2,
               width: width,
               size: _size2,
+              hash: hash,
+              switcher: switcher,
               image: image,
               sizeFator: 0.9,
               color: Colors.black26,
@@ -251,6 +268,8 @@ class _LandingPageState extends State<LandingPage>
             AnimatingCircles(
               animation: _animation1,
               width: width,
+              hash: hash,
+              switcher: switcher,
               size: _size1,
               image: image,
               sizeFator: 0.42,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blurhash/flutter_blurhash.dart';
 
 class AnimatingCircles extends StatefulWidget {
   const AnimatingCircles({
@@ -9,10 +10,13 @@ class AnimatingCircles extends StatefulWidget {
     this.image,
     this.sizeFator,
     this.color,
+    this.hash,
+    this.switcher,
   })  : _animation = animation,
         _size = size,
         super(key: key);
-
+  final String hash;
+  final bool switcher;
   final Animation _animation;
   final double width;
   final Animation _size;
@@ -41,12 +45,23 @@ class _AnimatingCirclesState extends State<AnimatingCircles> {
             child: OverflowBox(
               maxHeight: widget.width * 2,
               maxWidth: widget.width * 2,
-              child: Image.network(
-                widget.image,
-                fit: BoxFit.cover,
-                height: widget.width * widget._size.value,
-                width: widget.width * widget._size.value,
-              ),
+              child: widget.switcher
+                  ? Image.network(
+                      widget.image,
+                      fit: BoxFit.cover,
+                      height: widget.width * widget._size.value,
+                      width: widget.width * widget._size.value,
+                    )
+                  : Container(
+                      height: widget.width * widget._size.value,
+                      width: widget.width * widget._size.value,
+                      child: BlurHash(
+                        duration: Duration(seconds: 3),
+                        hash: widget.hash,
+                        image: widget.image,
+                        imageFit: BoxFit.cover,
+                      ),
+                    ),
             ),
           ),
         ),
@@ -54,4 +69,3 @@ class _AnimatingCirclesState extends State<AnimatingCircles> {
     );
   }
 }
-
