@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:imgkl/widgets/animated_circles.dart';
 import 'package:imgkl/widgets/animated_text.dart';
 import 'package:imgkl/widgets/custom_painter.dart';
+import 'package:imgkl/widgets/footer.dart';
 
 int i = 0;
 
@@ -35,6 +36,7 @@ List<String> titles = [
   "Pixie",
   "CommuniTV"
 ];
+
 List<String> subtitles = [
   'I Code Stuff.',
   'Light-hearted mean notifications in hour intrevals.',
@@ -222,12 +224,6 @@ class _LandingPageState extends State<LandingPage>
           style:
               TextStyle(color: currentIndex == 5 ? Colors.black : Colors.white),
         ),
-        // icon: Transform.rotate(
-        //     angle: -_animation3.value,
-        //     child: Icon(
-        //       Icons.panorama_fish_eye_outlined,
-        //       color: currentIndex == 5 ? Colors.black : Colors.white,
-        //     )),
         icon: Container(
           height: 30,
           width: 30,
@@ -301,52 +297,12 @@ class _LandingPageState extends State<LandingPage>
               marginTop: 250.0,
               text: subtitle,
             ),
-            if (currentIndex == 0)
-              Positioned(
-                bottom: 20,
-                child: Text(
-                  "Made with 💙 in Flutter",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-                ),
-              ),
-            //TODO: find the issue
-            // currentIndex != 0
-            //     ? Positioned(
-            //         top: 40,
-            //         left: 25,
-            //         child: GestureDetector(
-            //           onTap: () {
-            //             setState(() {
-            //               _controller1.forward();
-            //               _controller2.forward();
-            //               _controller3.forward();
-            //               _controller4.forward();
-            //               _controller5.forward();
-            //               _controller6.forward();
-            //               _controller7.forward();
-            //               Future.delayed(Duration(milliseconds: 300), () {
-            //                 image = images.elementAt(0);
-            //                 title = titles.elementAt(0);
-            //                 subtitle = subtitles.elementAt(0);
-            //                 currentIndex = 0;
-            //               });
-            //             });
-            //           },
-            //           child: Container(
-            //             child: Text(
-            //               "Home",
-            //               style: TextStyle(
-            //                 color: Colors.white,
-            //                 fontSize: 30,
-            //               ),
-            //             ),
-            //           ),
-            //         ),
-            //       )
-            //     : Container()
+            if (currentIndex == 0) Footer(),
+            // if (currentIndex != 0)
+            //   Preview(
+            //     currentIndex: currentIndex,
+            //     color: fabColors[currentIndex],
+            //   ),
           ],
         ),
       ),
