@@ -26,6 +26,10 @@ dependencies:
   flare_flutter: ^2.0.6
   animated_text_kit: ^2.2.0
   flutter_blurhash: ^0.5.0
+  font_awesome_flutter: ^8.10.1
+  url_launcher: ^5.7.10
+  flutter_showcase: ^0.1.0
+  rubber: ^0.4.0
 
 dev_dependencies:
   ? build_runner
