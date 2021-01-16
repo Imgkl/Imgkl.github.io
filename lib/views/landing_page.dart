@@ -10,6 +10,7 @@ int i = 0;
 List<String> images = [
   'https://i.imgur.com/zwsSGWj.jpg',
   'https://i.imgur.com/gSFHV65.jpg',
+  "https://i.imgur.com/T155kEy.jpg",
   "https://i.imgur.com/665Fat1.jpg",
   "https://i.imgur.com/Ud5XO0q.jpg",
   'https://i.imgur.com/fy07HZb.jpg',
@@ -20,6 +21,7 @@ List<String> images = [
 List<String> hashes = [
   "KKN,;__N4nS|%29FM_4nxu",
   "L23[xT%M004nj[fQayj[00Rj~q%M",
+  "LRG8==%MtUIU?wa{t8WAWqxvWAWB",
   "LHF~gV-;tRslG^t7tRoLT0RPoKRj",
   "LDN0*g~Uvz00?aWYRkt6~p9ZD%~p",
   "LHAU1[o~W=kCy?XTj[bHEmWXn%fk",
@@ -30,6 +32,7 @@ List<String> hashes = [
 List<String> titles = [
   'Sai Gokula Krishnan',
   'RUDE',
+  "Flikipedia",
   "Moofies",
   "Quotes.",
   "Yep/Nope",
@@ -40,6 +43,7 @@ List<String> titles = [
 List<String> subtitles = [
   'I Code Stuff.',
   'Light-hearted mean notifications in hour intrevals.',
+  "Minimalistic app for searching Wikipedia",
   "Movie searching never been easier",
   'Everyone needs motivation sometimes.\n Around 60K+ Quotes',
   'Too confused to take desicions?\nA Fun little app to nudge you in the right direction',
@@ -49,6 +53,7 @@ List<String> subtitles = [
 List<Color> fabColors = [
   Colors.cyan,
   Colors.red,
+  Colors.purple,
   Colors.orangeAccent,
   Colors.black,
   Colors.teal,
@@ -194,10 +199,10 @@ class _LandingPageState extends State<LandingPage>
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          if (i >= 6) {
+          if (i >= 7) {
             i = 0;
             switcher = true;
-          } else if (i < 6) {
+          } else if (i < 7) {
             i++;
           }
           setState(() {
@@ -220,9 +225,9 @@ class _LandingPageState extends State<LandingPage>
         backgroundColor: fabColors[currentIndex],
         isExtended: true,
         label: Text(
-          "$currentIndex/6",
+          "$currentIndex/7",
           style:
-              TextStyle(color: currentIndex == 5 ? Colors.black : Colors.white),
+              TextStyle(color: currentIndex == 6 ? Colors.black : Colors.white),
         ),
         icon: Container(
           height: 30,
@@ -231,8 +236,8 @@ class _LandingPageState extends State<LandingPage>
             backgroundColor: currentIndex == 3
                 ? Colors.white.withOpacity(0.2)
                 : Colors.black.withOpacity(0.2),
-            foregroundColor: currentIndex == 5 ? Colors.black : Colors.white,
-            value: currentIndex / 6,
+            foregroundColor: currentIndex == 6 ? Colors.black : Colors.white,
+            value: currentIndex / 7,
           ),
         ),
       ),
