@@ -1,65 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:imgkl/data/data.dart';
 import 'package:imgkl/widgets/animated_circles.dart';
 import 'package:imgkl/widgets/animated_text.dart';
 import 'package:imgkl/widgets/custom_painter.dart';
 import 'package:imgkl/widgets/footer.dart';
+import 'package:imgkl/widgets/preview.dart';
 
 int i = 0;
-
-List<String> images = [
-  'https://i.imgur.com/zwsSGWj.jpg',
-  'https://i.imgur.com/gSFHV65.jpg',
-  "https://i.imgur.com/T155kEy.jpg",
-  "https://i.imgur.com/665Fat1.jpg",
-  "https://i.imgur.com/Ud5XO0q.jpg",
-  'https://i.imgur.com/fy07HZb.jpg',
-  'https://i.imgur.com/09uFwAd.jpg',
-  'https://i.imgur.com/1u4m4pE.jpg',
-];
-
-List<String> hashes = [
-  "KKN,;__N4nS|%29FM_4nxu",
-  "L23[xT%M004nj[fQayj[00Rj~q%M",
-  "LRG8==%MtUIU?wa{t8WAWqxvWAWB",
-  "LHF~gV-;tRslG^t7tRoLT0RPoKRj",
-  "LDN0*g~Uvz00?aWYRkt6~p9ZD%~p",
-  "LHAU1[o~W=kCy?XTj[bHEmWXn%fk",
-  "L4AAaa0000-;00?b~qD%-;xu4n%M",
-  "L26uU~8w00%%00.9.SI801W,.7xI"
-];
-
-List<String> titles = [
-  'Sai Gokula Krishnan',
-  'RUDE',
-  "Flikipedia",
-  "Moofies",
-  "Quotes.",
-  "Yep/Nope",
-  "Pixie",
-  "CommuniTV"
-];
-
-List<String> subtitles = [
-  'I Code Stuff.',
-  'Light-hearted mean notifications in hour intrevals.',
-  "Minimalistic app for searching Wikipedia",
-  "Movie searching never been easier",
-  'Everyone needs motivation sometimes.\n Around 60K+ Quotes',
-  'Too confused to take desicions?\nA Fun little app to nudge you in the right direction',
-  'When you photograph people in color, you photograph their clothes.\nBut when you photograph people in Black and white, \nyou photograph their souls!',
-  'Hand curated top rated TV shows and details of where to watch '
-];
-List<Color> fabColors = [
-  Colors.cyan,
-  Colors.red,
-  Colors.purple,
-  Colors.orangeAccent,
-  Colors.black,
-  Colors.teal,
-  Colors.white,
-  Colors.greenAccent
-];
 
 String image = images.elementAt(0);
 String hash = hashes.elementAt(0);
@@ -96,7 +44,7 @@ class _LandingPageState extends State<LandingPage>
   AnimationController _controller7;
   Animation textAni;
   bool switcher = false;
-  int currentIndex = 0;
+  int currentIndex = 1;
 
   @override
   void initState() {
@@ -303,11 +251,10 @@ class _LandingPageState extends State<LandingPage>
               text: subtitle,
             ),
             if (currentIndex == 0) Footer(),
-            // if (currentIndex != 0)
-            //   Preview(
-            //     currentIndex: currentIndex,
-            //     color: fabColors[currentIndex],
-            //   ),
+            if (currentIndex != 0)
+              Preview(
+                currentIndex: currentIndex,
+              ),
           ],
         ),
       ),
