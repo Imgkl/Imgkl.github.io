@@ -44,7 +44,7 @@ class _LandingPageState extends State<LandingPage>
   AnimationController _controller7;
   Animation textAni;
   bool switcher = false;
-  int currentIndex = 1;
+  int currentIndex = 0;
 
   @override
   void initState() {
@@ -251,7 +251,10 @@ class _LandingPageState extends State<LandingPage>
               text: subtitle,
             ),
             if (currentIndex == 0) Footer(),
-            if (currentIndex != 0)
+            if (currentIndex != 0 &&
+                currentIndex != 3 &&
+                currentIndex != 7 &&
+                currentIndex != 6)
               Preview(
                 currentIndex: currentIndex,
               ),

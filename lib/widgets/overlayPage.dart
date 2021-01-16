@@ -93,13 +93,12 @@ class _PageLayoutState extends State<_PageLayout> {
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 2),
-                  buttonIconTheme: IconThemeData(color: Colors.black)),
+                  buttonIconTheme: IconThemeData(color: Colors.white)),
               app: apps[widget.currentIndex],
               title: titles[widget.currentIndex],
               description: descriptions[widget.currentIndex],
               links: [
-                LinkData.github(
-                    'https://github.com/jamesblasco/flutter_showcase'),
+                LinkData.github(githubLinks[widget.currentIndex]),
               ],
             ),
             Padding(
